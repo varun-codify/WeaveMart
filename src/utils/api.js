@@ -1,5 +1,5 @@
-// API base URL
-const API_URL = '/api';
+// API base URL - use environment variable in production, proxy in development
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 // Helper function to get auth token
 const getAuthToken = () => {
@@ -50,13 +50,13 @@ export const authAPI = {
             method: 'POST',
             body: JSON.stringify({ name, email, password }),
         }),
-    
+
     login: (email, password) =>
         apiRequest('/auth/login', {
             method: 'POST',
             body: JSON.stringify({ email, password }),
         }),
-    
+
     getMe: () => apiRequest('/auth/me'),
 };
 
@@ -66,21 +66,21 @@ export const productsAPI = {
         const query = new URLSearchParams(params).toString();
         return apiRequest(`/products${query ? `?${query}` : ''}`);
     },
-    
+
     getById: (id) => apiRequest(`/products/${id}`),
-    
+
     create: (productData) =>
         apiRequest('/products', {
             method: 'POST',
             body: JSON.stringify(productData),
         }),
-    
+
     update: (id, productData) =>
         apiRequest(`/products/${id}`, {
             method: 'PUT',
             body: JSON.stringify(productData),
         }),
-    
+
     delete: (id) =>
         apiRequest(`/products/${id}`, {
             method: 'DELETE',
@@ -90,24 +90,24 @@ export const productsAPI = {
 // Cart API
 export const cartAPI = {
     get: () => apiRequest('/cart'),
-    
+
     add: (productId, quantity = 1) =>
         apiRequest('/cart/add', {
             method: 'POST',
             body: JSON.stringify({ productId, quantity }),
         }),
-    
+
     update: (productId, quantity) =>
         apiRequest('/cart/update', {
             method: 'PATCH',
             body: JSON.stringify({ productId, quantity }),
         }),
-    
+
     remove: (productId) =>
         apiRequest(`/cart/remove/${productId}`, {
             method: 'DELETE',
         }),
-    
+
     clear: () =>
         apiRequest('/cart/clear', {
             method: 'DELETE',
@@ -121,13 +121,13 @@ export const ordersAPI = {
             method: 'POST',
             body: JSON.stringify(orderData),
         }),
-    
+
     getMyOrders: () => apiRequest('/orders/my-orders'),
-    
+
     getAll: () => apiRequest('/orders'),
-    
+
     getById: (id) => apiRequest(`/orders/${id}`),
-    
+
     updateStatus: (id, status) =>
         apiRequest(`/orders/${id}/status`, {
             method: 'PATCH',
