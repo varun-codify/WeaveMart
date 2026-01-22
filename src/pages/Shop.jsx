@@ -80,7 +80,7 @@ const Shop = () => {
         }
 
         return result;
-    }, [selectedCategory, sortBy]);
+    }, [selectedCategory, sortBy, products]);
 
     return (
         <div className="bg-brand-white min-h-screen pb-20 pt-8">

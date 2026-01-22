@@ -25,11 +25,11 @@ const About = () => {
 
                     <div className="my-12">
                         <img
-                            src="https://images.unsplash.com/photo-1606293926075-69a00dbfde81?auto=format&fit=crop&q=80&w=1200"
-                            alt="Loom working"
+                            src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?auto=format&fit=crop&q=80&w=1200"
+                            alt="Home Fashion Textile Showroom"
                             className="w-full h-64 md:h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />
-                        <p className="text-xs text-center text-stone-400 mt-2 italic">Traditional craftsmanship meeting modern design</p>
+                        <p className="text-xs text-center text-stone-400 mt-2 italic">Our showroom in Karur showcasing premium textiles</p>
                     </div>
 
                     <h3 className="text-brand-charcoal font-serif">Commitment to Quality</h3>

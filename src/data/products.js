@@ -60,7 +60,7 @@ export const products = [
         name: "Bamboo Fibre Bath Towel Set",
         price: 1899,
         category: "Bathroom",
-        image: "https://images.unsplash.com/photo-1616627547584-bf28cee262db?auto=format&fit=crop&q=80&w=1000", // Placeholder reused
+        image: "https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=1000",
         description: "Ultra-absorbent and naturally anti-bacterial bamboo towels. Soft on skin and eco-friendly.",
         details: {
             fabric: "Bamboo-Cotton Mix",
@@ -74,7 +74,7 @@ export const products = [
         name: "Hand-Block Print Floor Rug",
         price: 5999,
         category: "Living",
-        image: "https://images.unsplash.com/photo-1579722305886-f13ad9965620?auto=format&fit=crop&q=80&w=800", // Placeholder
+        image: "https://images.unsplash.com/photo-1600166898405-da9535204843?auto=format&fit=crop&q=80&w=800",
         description: "Artisan-crafted dhurrie rug having distinctive block prints inspired by South Indian temples.",
         details: {
             fabric: "Heavy Cotton Canvas",
