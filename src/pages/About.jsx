@@ -25,7 +25,7 @@ const About = () => {
 
                     <div className="my-12">
                         <img
-                            src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?auto=format&fit=crop&q=80&w=1200"
+                            src="https://images.unsplash.com/photo-1571624436279-b272aff752b5?fm=webp&q=75&w=800"
                             alt="Home Fashion Textile Showroom"
                             className="w-full h-64 md:h-96 object-cover grayscale hover:grayscale-0 transition-all duration-700"
                         />
